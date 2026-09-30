@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusBuddy | Student Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <span>CampusBuddy</span>
+            </div>
+
+
+            <p class="menu-title">MAIN MENU</p>
+
+            <ul class="menu">
+
+                <li class="active">
+                    <a href="#dashboard">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#subjects">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>My Subjects</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#assignments">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <span>Assignments</span>
+                        <b id="sidebarCount">0</b>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#schedule">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>Schedule</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#goals">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <span>Study Goals</span>
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <p class="menu-title">OTHER</p>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="#" id="settingsBtn">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" id="helpBtn">
+                        <i class="fa-solid fa-circle-question"></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- Productivity Card -->
+
+            <div class="upgrade-card">
+
+                <div class="upgrade-icon">
+                    🚀
+                </div>
+
+                <h4>Stay Productive!</h4>
+
+                <p>
+                    Small steps every day lead to big results.
+                </p>
+
+                <button id="focusFromSidebar">
+                    Start Focus
+                </button>
+
+            </div>
+
+
+            <div class="logout" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main-content">
+
+
+            <!-- ================= TOPBAR ================= -->
+
+            <header class="topbar">
+
+                <button class="mobile-menu" id="mobileMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text"
+                        id="searchInput"
+                        placeholder="Search assignments...">
+
+                </div>
+
+
+                <div class="top-actions">
+
+                    <button class="theme-btn" id="themeBtn">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+
+                    <button class="notification" id="notificationBtn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span></span>
+
+                    </button>
+
+
+                    <div class="student-profile" id="profileBtn">
+
+                        <div class="profile-image">
+                            S
+                        </div>
+
+                        <div class="profile-info">
+
+                            <strong>Student</strong>
+
+                            <small>B.Tech CSE</small>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= PAGE CONTENT ================= -->
+
+            <div class="page-content" id="dashboard">
+
+
+                <!-- ================= WELCOME ================= -->
+
+                <section class="welcome-section">
+
+                    <div>
+
+                        <p class="welcome-small">
+                            STUDENT DASHBOARD
+                        </p>
+
+                        <h1 id="welcomeMessage">
+                            Welcome back, Student! 👋
+                        </h1>
+
+                        <p class="welcome-text">
+                            Stay organized and make your college life easier.
+                        </p>
+
+                    </div>
+
+
+                    <div class="date-box">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <span id="currentDate">
+                            Today
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= STATS ================= -->
+
+                <section class="stats-grid">
+
+
+                    <div class="stat-card purple-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Total Subjects</span>
+
+                            <h2>05</h2>
+
+                            <small>
+                                <i class="fa-solid fa-circle-check"></i>
+                                This semester
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card blue-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Pending Tasks</span>
+
+                            <h2 id="pendingCount">0</h2>
+
+                            <small>
+                                <i class="fa-solid fa-clock"></i>
+                                Need attention
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card orange-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Study Streak</span>
+
+                            <h2>07 Days</h2>
+
+                            <small>
+                                🔥 Keep going!
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card green-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Task Progress</span>
+
+                            <h2 id="overallProgress">0%</h2>
+
+                            <small>
+                                <i class="fa-solid fa-arrow-up"></i>
+                                Keep improving
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= SUBJECTS + PROGRESS ================= -->
+
+                <section class="middle-grid">
+
+
+                    <!-- SUBJECTS -->
+
+                    <div class="content-card" id="subjects">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h2>My Subjects 📚</h2>
+
+                                <p>
+                                    Your current semester subjects
+                                </p>
+                            </div>
+
+                            <button class="view-btn">
+                                View All
+                            </button>
+
+                        </div>
+
+
+                        <div class="subjects-grid">
+
+
+                            <div class="subject">
+
+                                <div class="subject-top">
+
+                                    <div class="subject-icon purple">
+                                        <i class="fa-solid fa-code"></i>
+                                    </div>
+
+                                    <span>75%</span>
+
+                                </div>
+
+                                <h3>Web Development</h3>
+
+                                <p>HTML • CSS • JavaScript</p>
+
+                                <div class="progress">
+                                    <div style="width: 75%;"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="subject">
+
+                                <div class="subject-top">
+
+                                    <div class="subject-icon blue">
+                                        <i class="fa-brands fa-java"></i>
+                                    </div>
+
+                                    <span>68%</span>
+
+                                </div>
+
+                                <h3>Java Programming</h3>
+
+                                <p>OOP • Collections • JDBC</p>
+
+                                <div class="progress blue-progress">
+                                    <div style="width: 68%;"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="subject">
+
+                                <div class="subject-top">
+
+                                    <div class="subject-icon orange">
+                                        <i class="fa-solid fa-robot"></i>
+                                    </div>
+
+                                    <span>82%</span>
+
+                                </div>
+
+                                <h3>Artificial Intelligence</h3>
+
+                                <p>ML • Search • Knowledge</p>
+
+                                <div class="progress orange-progress">
+                                    <div style="width: 82%;"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="subject">
+
+                                <div class="subject-top">
+
+                                    <div class="subject-icon green">
+                                        <i class="fa-solid fa-database"></i>
+                                    </div>
+
+                                    <span>70%</span>
+
+                                </div>
+
+                                <h3>Database Management</h3>
+
+                                <p>SQL • MySQL • Normalization</p>
+
+                                <div class="progress green-progress">
+                                    <div style="width: 70%;"></div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STUDY PROGRESS -->
+
+                    <div class="content-card progress-card" id="goals">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h2>Study Progress 🎯</h2>
+
+                                <p>
+                                    Based on your assignments
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-wrapper">
+
+                            <div class="big-progress" id="bigProgress">
+
+                                <div class="progress-inner">
+
+                                    <strong id="circleProgress">
+                                        0%
+                                    </strong>
+
+                                    <span>
+                                        Completed
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-details">
+
+                            <div>
+                                <span class="dot purple-dot"></span>
+
+                                Completed
+
+                                <strong id="completedCount">
+                                    0
+                                </strong>
+                            </div>
+
+
+                            <div>
+                                <span class="dot gray-dot"></span>
+
+                                Pending
+
+                                <strong id="progressPending">
+                                    0
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="motivation">
+
+                            <span>✨</span>
+
+                            <p id="progressMessage">
+                                Start completing your tasks!
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= SCHEDULE ================= -->
+
+                <section class="content-card schedule-card"
+                    id="schedule">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>Today's Schedule 📅</h2>
+
+                            <p>
+                                Your classes for today
+                            </p>
+
+                        </div>
+
+                        <button class="view-btn">
+                            Full Schedule
+                        </button>
+
+                    </div>
+
+
+                    <div class="schedule-list">
+
+
+                        <div class="schedule-item">
+
+                            <div class="schedule-time">
+                                <strong>09:00</strong>
+                                <span>AM</span>
+                            </div>
+
+                            <div class="schedule-line"></div>
+
+                            <div class="schedule-info">
+
+                                <h3>Web Development</h3>
+
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Room 204 • Computer Lab
+                                </p>
+
+                            </div>
+
+                            <span class="class-badge">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+                        <div class="schedule-item current">
+
+                            <div class="schedule-time">
+                                <strong>11:00</strong>
+                                <span>AM</span>
+                            </div>
+
+                            <div class="schedule-line"></div>
+
+                            <div class="schedule-info">
+
+                                <h3>Object Oriented Programming</h3>
+
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Room 105 • CSE Department
+                                </p>
+
+                            </div>
+
+                            <span class="class-badge live">
+                                Now
+                            </span>
+
+                        </div>
+
+
+                        <div class="schedule-item">
+
+                            <div class="schedule-time">
+                                <strong>01:00</strong>
+                                <span>PM</span>
+                            </div>
+
+                            <div class="schedule-line"></div>
+
+                            <div class="schedule-info">
+
+                                <h3>Artificial Intelligence</h3>
+
+                                <p>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Lab 2 • CSE Department
+                                </p>
+
+                            </div>
+
+                            <span class="class-badge upcoming">
+                                Upcoming
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= ASSIGNMENTS ================= -->
+
+                <section class="content-card assignments-card"
+                    id="assignments">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>My Assignments 📝</h2>
+
+                            <p>
+                                Add and manage your college tasks
+                            </p>
+
+                        </div>
+
+
+                        <button class="add-btn" id="addAssignmentBtn">
+                            <i class="fa-solid fa-plus"></i>
+                            Add Assignment
+                        </button>
+
+                    </div>
+
+
+                    <!-- Assignment Form -->
+
+                    <div class="assignment-form"
+                        id="assignmentForm">
+
+                        <div class="input-group">
+
+                            <label>Assignment Name</label>
+
+                            <input
+                                type="text"
+                                id="assignmentName"
+                                placeholder="e.g. JavaScript Project">
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Subject</label>
+
+                            <select id="assignmentSubject">
+
+                                <option value="">
+                                    Select Subject
+                                </option>
+
+                                <option>
+                                    Web Development
+                                </option>
+
+                                <option>
+                                    Java Programming
+                                </option>
+
+                                <option>
+                                    Artificial Intelligence
+                                </option>
+
+                                <option>
+                                    Database Management
+                                </option>
+
+                                <option>
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Deadline</label>
+
+                            <input
+                                type="date"
+                                id="assignmentDeadline">
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Priority</label>
+
+                            <select id="assignmentPriority">
+
+                                <option value="Low">
+                                    Low
+                                </option>
+
+                                <option value="Medium" selected>
+                                    Medium
+                                </option>
+
+                                <option value="High">
+                                    High
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-buttons">
+
+                            <button
+                                class="cancel-btn"
+                                id="cancelAssignmentBtn">
+                                Cancel
+                            </button>
+
+                            <button
+                                class="save-btn"
+                                id="saveAssignmentBtn">
+                                <i class="fa-solid fa-check"></i>
+                                Save Assignment
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Assignment List -->
+
+                    <div class="assignment-list"
+                        id="assignmentList">
+
+                        <!-- JavaScript will insert assignments here -->
+
+                    </div>
+
+
+                    <!-- Empty Message -->
+
+                    <div class="empty-assignment"
+                        id="emptyAssignment">
+
+                        <div>
+                            📝
+                        </div>
+
+                        <h3>
+                            No assignments yet
+                        </h3>
+
+                        <p>
+                            Add your first assignment to get started.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= FOCUS TIMER ================= -->
+
+                <section class="focus-card"
+                    id="focusTimer">
+
+                    <div class="focus-info">
+
+                        <span class="small-title">
+                            FOCUS SESSION
+                        </span>
+
+                        <h2>
+                            Time to Focus 🎯
+                        </h2>
+
+                        <p>
+                            Stay focused for 25 minutes and make
+                            progress towards your goals.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timer-section">
+
+                        <div class="timer-circle">
+
+                            <span id="timer">
+                                25:00
+                            </span>
+
+                        </div>
+
+
+                        <div class="timer-buttons">
+
+                            <button id="startTimer">
+                                <i class="fa-solid fa-play"></i>
+                                Start
+                            </button>
+
+                            <button id="resetTimer">
+                                <i class="fa-solid fa-rotate-right"></i>
+                                Reset
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= MOTIVATION ================= -->
+
+                <div class="quote-box">
+
+                    <div class="quote-icon">
+                        💡
+                    </div>
+
+
+                    <div class="quote-content">
+
+                        <strong>
+                            Today's Motivation
+                        </strong>
+
+                        <p id="quoteText">
+                            "Success is the sum of small efforts,
+                            repeated day in and day out."
+                        </p>
+
+                    </div>
+
+
+                    <button id="newQuoteBtn">
+                        New Quote ✨
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
