@@ -26,3 +26,11 @@ CampusBuddy-Student-Dashboard/
 ├── index.html
 ├── style.css
 └── script.js
+
+## 📸 Project Screenshots
+
+### Dashboard
+![CampusBuddy Dashboard](campusbuddy-dashboard.png)
+
+### Features
+![CampusBuddy Features](campusbuddy-features.png)
