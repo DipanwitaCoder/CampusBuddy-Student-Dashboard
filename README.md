@@ -26,7 +26,7 @@ CampusBuddy-Student-Dashboard/
 ├── index.html
 ├── style.css
 └── script.js
-
+```
 ## 📸 Project Screenshots
 
 ### Dashboard
